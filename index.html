@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mezinha — Pedidos na mesa com QR Code para praia e restaurante</title>
+    <meta
+      name="description"
+      content="Mezinha é o sistema de pedidos na mesa com QR Code: cliente pede pelo celular, cozinha organiza a fila e o garçom entrega em tempo real. Ideal para praia e restaurante."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="Mezinha" />
+    <meta name="theme-color" content="#ff714b" />
+    <link rel="canonical" href="https://www.mezinha.com.br/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://www.mezinha.com.br/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.mezinha.com.br/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Mezinha" />
+    <meta property="og:title" content="Mezinha — Pedidos na mesa com QR Code" />
+    <meta
+      property="og:description"
+      content="Sistema completo para mesas com QR Code: cardápio digital, painéis para garçom e cozinha, pedidos em tempo real."
+    />
+    <meta property="og:url" content="https://www.mezinha.com.br/" />
+    <meta property="og:image" content="https://www.mezinha.com.br/assets/og-image.svg" />
+    <meta property="og:image:alt" content="Mezinha — Pedidos na mesa com QR Code" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mezinha — Pedidos na mesa com QR Code" />
+    <meta
+      name="twitter:description"
+      content="Cliente pede pelo celular, cozinha organiza a fila e o garçom entrega com tudo sincronizado em tempo real."
+    />
+    <meta name="twitter:image" content="https://www.mezinha.com.br/assets/og-image.svg" />
+
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/assets/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/theme.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://www.mezinha.com.br/#organization",
+            "name": "Mezinha",
+            "url": "https://www.mezinha.com.br/",
+            "logo": "https://www.mezinha.com.br/assets/og-image.svg",
+            "email": "contato@www.mezinha.com.br",
+            "description": "Plataforma de pedidos na mesa com QR Code para restaurantes e barracas de praia."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.mezinha.com.br/#website",
+            "url": "https://www.mezinha.com.br/",
+            "name": "Mezinha",
+            "publisher": { "@id": "https://www.mezinha.com.br/#organization" },
+            "inLanguage": "pt-BR"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://www.mezinha.com.br/#software",
+            "name": "Mezinha",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "url": "https://www.mezinha.com.br/",
+            "description": "Sistema de pedidos na mesa com QR Code para praia e restaurante.",
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "Plano Praia",
+                "price": "99",
+                "priceCurrency": "BRL",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "price": "99",
+                  "priceCurrency": "BRL",
+                  "billingDuration": "P1M"
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Plano Restaurante",
+                "price": "249",
+                "priceCurrency": "BRL",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "price": "249",
+                  "priceCurrency": "BRL",
+                  "billingDuration": "P1M"
+                }
+              }
+            ],
+            "provider": { "@id": "https://www.mezinha.com.br/#organization" }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://www.mezinha.com.br/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "O cliente precisa instalar aplicativo?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Não. O cliente escaneia o QR Code da mesa e pede pelo navegador do celular, informando apenas o nome."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "A Mezinha funciona na praia com internet instável?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sim. O fluxo foi pensado para operação com 4G instável, com sessão persistente e sincronização em tempo real entre cliente, cozinha e garçom."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Quanto custa a Mezinha?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "O plano Praia custa R$ 99/mês (até 10 mesas) e o plano Restaurante R$ 249/mês (até 40 mesas). Redes com vários pontos têm condições sob consulta."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <script src="/js/config.js"></script>
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('mezinha.theme');
+          if (stored === 'dark' || stored === 'light') {
+            document.documentElement.setAttribute('data-theme', stored);
+            return;
+          }
+          if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo-principal">Ir para o conteúdo</a>
+
+    <div class="landing">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="Mezinha — início">
+          <span class="brand-mark" aria-hidden="true">M</span>
+          <span class="brand-name">Mezinha</span>
+        </a>
+        <nav class="nav-desktop" aria-label="Navegação principal">
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#planos">Planos</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        <div class="header-actions">
+          <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">🌙</button>
+          <a class="btn-ghost" data-app-path="/owner/login">Dono</a>
+          <a class="btn-ghost" data-app-path="/waiter/login">Equipe</a>
+          <a class="btn-primary-sm" data-app-path="/join">Entrar na mesa</a>
+        </div>
+      </header>
+
+      <main id="conteudo-principal">
+        <section class="hero" id="top">
+          <div class="hero-copy">
+            <p class="eyebrow">Pedidos na praia e no restaurante, sem complicação</p>
+            <h1>Pediu, acompanhou, curtiu — a <span class="gradient-text">Mezinha</span> cuida do resto</h1>
+            <p class="lead">
+              Sistema completo para mesas com QR Code: cliente pede pelo celular, cozinha organiza a fila e o garçom
+              entrega com tudo sincronizado em tempo real.
+            </p>
+            <div class="hero-cta">
+              <a class="btn-primary" data-app-path="/join">Experimentar como cliente</a>
+              <a class="btn-outline" href="#como-funciona">Ver como funciona</a>
+            </div>
+          </div>
+          <aside class="hero-visual" aria-label="Exemplo de pedidos em tempo real na mesa">
+            <div class="hero-card">
+              <div class="hero-card-row">
+                <span class="pill">Mesa 12 · Aberta</span>
+                <span class="live" aria-label="Atualização ao vivo">● ao vivo</span>
+              </div>
+              <ul class="hero-card-list">
+                <li><span aria-hidden="true">🍹</span> Caipirinha <em>Pronto</em></li>
+                <li><span aria-hidden="true">🦐</span> Camarão grelhado <em>Em preparo</em></li>
+                <li><span aria-hidden="true">🍰</span> Sobremesa <em>Na fila</em></li>
+              </ul>
+            </div>
+          </aside>
+        </section>
+
+        <section id="como-funciona" class="section" aria-labelledby="titulo-como-funciona">
+          <div class="section-head">
+            <h2 id="titulo-como-funciona">Como funciona</h2>
+            <p>Do QR Code na mesa até a conta fechada — um fluxo pensado para quem está na areia ou no salão.</p>
+          </div>
+          <ol class="flow-grid">
+            <li class="flow-step">
+              <span class="flow-index" aria-hidden="true">1</span>
+              <span class="flow-icon" aria-hidden="true">🏖️</span>
+              <h3>Garçom abre a mesa</h3>
+              <p>O garçom inicia a sessão no painel. A mesa fica pronta para receber clientes.</p>
+            </li>
+            <li class="flow-step">
+              <span class="flow-index" aria-hidden="true">2</span>
+              <span class="flow-icon" aria-hidden="true">📱</span>
+              <h3>Cliente escaneia o QR</h3>
+              <p>Sem app e sem cadastro — só o nome. Ideal para praia e 4G instável.</p>
+            </li>
+            <li class="flow-step">
+              <span class="flow-index" aria-hidden="true">3</span>
+              <span class="flow-icon" aria-hidden="true">🍽️</span>
+              <h3>Pedido na mesa</h3>
+              <p>Cardápio digital, pedidos juntos ou separados, acompanhamento em tempo real.</p>
+            </li>
+            <li class="flow-step">
+              <span class="flow-index" aria-hidden="true">4</span>
+              <span class="flow-icon" aria-hidden="true">👨‍🍳</span>
+              <h3>Cozinha e entrega</h3>
+              <p>Fila na cozinha, notificação ao garçom e status até a entrega na mesa.</p>
+            </li>
+            <li class="flow-step">
+              <span class="flow-index" aria-hidden="true">5</span>
+              <span class="flow-icon" aria-hidden="true">✅</span>
+              <h3>Conta encerrada</h3>
+              <p>Garçom fecha a sessão, libera a mesa e o ciclo recomeça.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section id="sobre" class="section section-alt" aria-labelledby="titulo-sobre">
+          <div class="section-inner">
+            <div class="about-grid">
+              <article class="about-card">
+                <h2 id="titulo-sobre">Missão</h2>
+                <p>
+                  Facilitar pedidos em restaurantes e barracas de praia com tecnologia leve, acessível e que funcione
+                  mesmo com internet instável — sem exigir app ou cadastro do cliente.
+                </p>
+              </article>
+              <article class="about-card">
+                <h2>Visão</h2>
+                <p>
+                  Ser a plataforma de referência para experiências de mesa no Brasil, unindo simplicidade para o
+                  cliente e controle operacional para estabelecimentos de todos os portes.
+                </p>
+              </article>
+            </div>
+
+            <div class="values-block">
+              <h2>Valores</h2>
+              <div class="values-grid">
+                <article class="value-card">
+                  <h3>Simplicidade</h3>
+                  <p>Menos fricção para quem está de férias ou com pressa — pedir tem que ser rápido.</p>
+                </article>
+                <article class="value-card">
+                  <h3>Confiabilidade</h3>
+                  <p>Sessão persistente e tempo real para o time não perder pedido com internet ruim.</p>
+                </article>
+                <article class="value-card">
+                  <h3>Transparência</h3>
+                  <p>Cliente vê o status do pedido; cozinha e garçom trabalham no mesmo fluxo.</p>
+                </article>
+                <article class="value-card">
+                  <h3>Respeito ao time</h3>
+                  <p>Ferramentas claras para garçom, cozinha e dono — cada um no seu painel.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="planos" class="section" aria-labelledby="titulo-planos">
+          <div class="section-head">
+            <h2 id="titulo-planos">Planos</h2>
+            <p>Escolha o tamanho do seu negócio. Todos incluem atualizações e hospedagem na nuvem.</p>
+          </div>
+          <div class="plans-grid">
+            <article class="plan-card">
+              <h3>Praia</h3>
+              <p class="plan-desc">Barracas e quiosques com poucas mesas.</p>
+              <div class="plan-price">
+                <span class="amount">R$ 99</span>
+                <span class="period">/mês</span>
+              </div>
+              <ul class="plan-features">
+                <li>Até 10 mesas</li>
+                <li>Cardápio digital</li>
+                <li>Painéis garçom e cozinha</li>
+                <li>QR Code por mesa</li>
+                <li>Suporte por e-mail</li>
+              </ul>
+              <a class="btn-plan" href="#contato">Começar agora</a>
+            </article>
+
+            <article class="plan-card plan-highlight">
+              <div class="plan-badge">Mais popular</div>
+              <h3>Restaurante</h3>
+              <p class="plan-desc">Estabelecimentos em operação contínua.</p>
+              <div class="plan-price">
+                <span class="amount">R$ 249</span>
+                <span class="period">/mês</span>
+              </div>
+              <ul class="plan-features">
+                <li>Até 40 mesas</li>
+                <li>Tudo do plano Praia</li>
+                <li>Múltiplos garçons e cozinheiros</li>
+                <li>Relatórios básicos</li>
+                <li>Suporte prioritário</li>
+              </ul>
+              <a class="btn-plan btn-primary" data-app-path="/owner/register">Começar agora</a>
+            </article>
+
+            <article class="plan-card">
+              <h3>Rede</h3>
+              <p class="plan-desc">Vários pontos ou alto volume.</p>
+              <div class="plan-price">
+                <span class="amount">Sob consulta</span>
+              </div>
+              <ul class="plan-features">
+                <li>Mesas ilimitadas</li>
+                <li>Onboarding dedicado</li>
+                <li>SLA e integrações</li>
+                <li>Treinamento da equipe</li>
+                <li>Conta gerente de sucesso</li>
+              </ul>
+              <a class="btn-plan" href="#contato">Falar conosco</a>
+            </article>
+          </div>
+        </section>
+
+        <section id="faq" class="section section-alt" aria-labelledby="titulo-faq">
+          <div class="section-inner">
+            <div class="section-head">
+              <h2 id="titulo-faq">Perguntas frequentes</h2>
+              <p>Dúvidas comuns de quem quer digitalizar pedidos na mesa.</p>
+            </div>
+            <div class="faq-list">
+              <details class="faq-item">
+                <summary>O cliente precisa instalar aplicativo?</summary>
+                <p>
+                  Não. O cliente escaneia o QR Code da mesa e pede pelo navegador do celular, informando apenas o nome.
+                </p>
+              </details>
+              <details class="faq-item">
+                <summary>Funciona na praia com internet instável?</summary>
+                <p>
+                  Sim. A Mezinha foi pensada para operação com 4G instável, com sessão persistente e sincronização em
+                  tempo real entre cliente, cozinha e garçom.
+                </p>
+              </details>
+              <details class="faq-item">
+                <summary>Quanto custa?</summary>
+                <p>
+                  O plano Praia custa R$ 99/mês (até 10 mesas) e o plano Restaurante R$ 249/mês (até 40 mesas). Para
+                  redes com vários pontos, fale conosco.
+                </p>
+              </details>
+            </div>
+          </div>
+        </section>
+
+        <section id="contato" class="section section-alt" aria-labelledby="titulo-contato">
+          <div class="section-inner">
+            <div class="contact-wrap">
+              <div class="contact-copy">
+                <h2 id="titulo-contato">Contato</h2>
+                <p>
+                  Quer levar a Mezinha para o seu estabelecimento? Fale conosco para demo, planos ou parcerias.
+                </p>
+                <ul class="contact-list">
+                  <li>
+                    <strong>E-mail</strong>
+                    <a href="mailto:contato@www.mezinha.com.br">contato@www.mezinha.com.br</a>
+                  </li>
+                  <li>
+                    <strong>WhatsApp</strong>
+                    <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">(11) 99999-9999</a>
+                  </li>
+                  <li>
+                    <strong>Horário</strong>
+                    <span>Seg–Sex, 9h às 18h (BRT)</span>
+                  </li>
+                </ul>
+              </div>
+              <form class="contact-form" id="contact-form" action="mailto:contato@www.mezinha.com.br" method="post">
+                <label>
+                  Nome
+                  <input type="text" name="name" placeholder="Seu nome" autocomplete="name" required />
+                </label>
+                <label>
+                  E-mail
+                  <input type="email" name="email" placeholder="voce@email.com" autocomplete="email" required />
+                </label>
+                <label>
+                  Estabelecimento
+                  <input type="text" name="business" placeholder="Nome do bar ou restaurante" />
+                </label>
+                <label>
+                  Mensagem
+                  <textarea name="message" rows="4" placeholder="Como podemos ajudar?" required></textarea>
+                </label>
+                <button type="submit" class="btn-primary btn-full">Enviar mensagem</button>
+                <p class="form-note">Ao enviar, seu cliente de e-mail será aberto com a mensagem preenchida.</p>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">M</span>
+          <span>Mezinha © <span id="footer-year">2026</span></span>
+        </div>
+        <nav class="footer-nav" aria-label="Links do aplicativo">
+          <a data-app-path="/join">Cliente</a>
+          <a data-app-path="/waiter/login">Garçom</a>
+          <a data-app-path="/cook/login">Cozinha</a>
+          <a data-app-path="/owner/login">Dono</a>
+        </nav>
+      </footer>
+    </div>
+
+    <script src="/js/main.js" defer></script>
+  </body>
+</html>
