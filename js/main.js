@@ -69,7 +69,7 @@
         ['Nome: ' + name, 'E-mail: ' + email, 'Estabelecimento: ' + business, '', message].join('\n')
       );
 
-      window.location.href = 'mailto:contato@www.mezinha.com.br?subject=' + subject + '&body=' + body;
+      window.location.href = 'mailto:contato@mezinha.com.br?subject=' + subject + '&body=' + body;
     });
   }
 
